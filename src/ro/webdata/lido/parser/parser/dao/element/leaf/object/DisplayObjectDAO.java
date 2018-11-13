@@ -1,0 +1,13 @@
+package ro.webdata.lido.parser.parser.dao.element.leaf.object;
+
+import ro.webdata.lido.parser.parser.model.element.leaf.object.DisplayObject;
+import org.w3c.dom.Node;
+
+public interface DisplayObjectDAO {
+	/**
+	 *
+	 * @param node <b>lido:displayObject</b> node type.
+	 * @return <b>DisplayObject</b>
+	 */
+	DisplayObject getDisplayObject(Node node);
+}

@@ -1,0 +1,13 @@
+package ro.webdata.lido.parser.parser.dao.element.leaf.date;
+
+import ro.webdata.lido.parser.parser.model.element.leaf.date.EarliestDate;
+import org.w3c.dom.Node;
+
+public interface EarliestDateDAO {
+	/**
+	 *
+	 * @param node <b>lido:earliestDate</b> node type.
+	 * @return <b>EarliestDate</b>
+	 */
+	EarliestDate getEarliestDate(Node node);
+}
