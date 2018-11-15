@@ -1,9 +1,9 @@
 package ro.webdata.lido.parser;
 
 import ro.webdata.lido.parser.common.Constants;
-import ro.webdata.lido.parser.parser.dao.ParserDAO;
-import ro.webdata.lido.parser.parser.dao.impl.ParserDAOImpl;
-import ro.webdata.lido.parser.parser.model.element.LidoWrap;
+import ro.webdata.lido.parser.core.ParserDAO;
+import ro.webdata.lido.parser.core.ParserDAOImpl;
+import ro.webdata.lido.parser.core.wrap.lidoWrap.LidoWrap;
 
 public class Main {
 //	http://www.lido-schema.org/schema/v1.0/lido-v1.0-schema-listing.html#conceptComplexType

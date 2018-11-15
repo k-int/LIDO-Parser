@@ -1,7 +1,7 @@
 package ro.webdata.lido.parser.common;
 
-import ro.webdata.lido.parser.parser.model.element.Lido;
-import ro.webdata.lido.parser.parser.model.element.LidoWrap;
+import ro.webdata.lido.parser.core.leaf.lido.Lido;
+import ro.webdata.lido.parser.core.wrap.lidoWrap.LidoWrap;
 
 public class PrintMessages {
     /**
