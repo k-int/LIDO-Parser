@@ -3,6 +3,7 @@ package ro.webdata.lido.parser;
 import ro.webdata.lido.parser.common.Constants;
 import ro.webdata.lido.parser.core.ParserDAO;
 import ro.webdata.lido.parser.core.ParserDAOImpl;
+import ro.webdata.lido.parser.core.wrap.eventWrap.EventWrap;
 import ro.webdata.lido.parser.core.wrap.lidoWrap.LidoWrap;
 
 public class Main {
@@ -14,6 +15,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		String xmlFilePath = Constants.TEST_FILE_FULL_PATH;
+		System.out.println("xmlFilePath: " + xmlFilePath);
 		ParserDAO parserDAO = new ParserDAOImpl();
 		LidoWrap lidoWrap = parserDAO.parseLidoFile(xmlFilePath);
 	}

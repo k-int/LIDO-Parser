@@ -30,7 +30,8 @@ public class ParserDAOImpl implements ParserDAO {
             Element lidoWrapNode = doc.getDocumentElement();
             lidoWrap = lidoWrapParser.getLidoWrap(lidoWrapNode);
 
-            printMessages.printLidoSummary(lidoWrap);
+            //TODO: print message for debugging
+//            printMessages.printLidoSummary(lidoWrap);
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {

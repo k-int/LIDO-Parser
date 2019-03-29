@@ -17,10 +17,10 @@ import ro.webdata.lido.parser.core.complex.eventSetComplexType.EventSetComplexTy
 public class RelatedEvent extends EventSetComplexType {
 	public RelatedEvent() {}
 
-	public RelatedEvent(EventSetComplexType dventSetComplexType) {
+	public RelatedEvent(EventSetComplexType eventSetComplexType) {
 		super(
-			dventSetComplexType.getDisplayEvent(),
-			dventSetComplexType.getEvent()
+			eventSetComplexType.getDisplayEvent(),
+			eventSetComplexType.getEvent()
 		);
 	}
 }

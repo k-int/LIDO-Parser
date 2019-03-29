@@ -19,7 +19,7 @@ public class EventWrapDAOImpl implements EventWrapDAO {
             Node child = childNodeList.item(i);
             String childName = child.getNodeName();
 
-            if (childName.equals("lido:classification")) {
+            if (childName.equals("lido:eventSet")) {
                 eventSetList.add(eventSetParser.getEventSet(child));
             }
         }
