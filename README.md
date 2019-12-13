@@ -1,2 +1,2 @@
 # LIDO-Parser
-Java parser for LIDO schema
+Java parser for metadata presented according to LIDO XML Schema
