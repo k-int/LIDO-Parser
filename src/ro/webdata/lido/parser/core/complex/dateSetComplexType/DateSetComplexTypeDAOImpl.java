@@ -26,6 +26,10 @@ public class DateSetComplexTypeDAOImpl implements DateSetComplexTypeDAO {
 
             switch (childName) {
                 case "lido:displayDate":
+                    //TODO (for all arrays): add the item in the array only if it's NOT NULL
+                    // in the "inp-clasate-arheologie-2014-02-02.xml" the last DisplayDate is null
+                    // and because of this is thrown an error
+                    // System.out.println(displayDateParser.getDisplayDate(child) == null);
                     displayDateList.add(displayDateParser.getDisplayDate(child));
                     break;
                 case "lido:date":
