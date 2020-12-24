@@ -2,7 +2,7 @@ package ro.webdata.parser.xml.lido.core.wrap.lidoWrap;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.lido.LidoDAO;
 import ro.webdata.parser.xml.lido.core.leaf.lido.LidoDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoRelatedEncoding;
@@ -13,11 +13,10 @@ import java.util.HashMap;
 
 public class LidoWrapDAOImpl implements LidoWrapDAO {
     private static LidoDAO lidoParserDAOImpl = new LidoDAOImpl();
-    private static Utils utils = new Utils();
 
     public LidoWrap getLidoWrap(Node node) {
         ArrayList<Lido> lidoList = new ArrayList<Lido>();
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

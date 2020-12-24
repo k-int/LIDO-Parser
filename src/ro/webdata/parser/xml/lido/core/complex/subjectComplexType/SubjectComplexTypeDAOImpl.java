@@ -2,7 +2,7 @@ package ro.webdata.parser.xml.lido.core.complex.subjectComplexType;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.extentSubject.ExtentSubject;
 import ro.webdata.parser.xml.lido.core.leaf.extentSubject.ExtentSubjectDAO;
 import ro.webdata.parser.xml.lido.core.leaf.extentSubject.ExtentSubjectDAOImpl;
@@ -37,7 +37,6 @@ public class SubjectComplexTypeDAOImpl implements SubjectComplexTypeDAO {
     private static SubjectEventDAO subjectEvent = new SubjectEventDAOImpl();
     private static SubjectPlaceDAO subjectPlace = new SubjectPlaceDAOImpl();
     private static SubjectObjectDAO subjectObject = new SubjectObjectDAOImpl();
-    private static Utils utils = new Utils();
 
     public SubjectComplexType getSubjectComplexType(Node node) {
         ArrayList<ExtentSubject> extentSubjectList = new ArrayList<ExtentSubject>();
@@ -47,7 +46,7 @@ public class SubjectComplexTypeDAOImpl implements SubjectComplexTypeDAO {
         ArrayList<SubjectEvent> subjectEventList = new ArrayList<SubjectEvent>();
         ArrayList<SubjectPlace> subjectPlaceList = new ArrayList<SubjectPlace>();
         ArrayList<SubjectObject> subjectObjectList = new ArrayList<SubjectObject>();
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

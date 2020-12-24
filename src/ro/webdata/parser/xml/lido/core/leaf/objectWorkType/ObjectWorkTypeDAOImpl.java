@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.objectWorkType;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.complex.conceptComplexType.ConceptComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.conceptComplexType.ConceptComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
@@ -11,10 +11,9 @@ import java.util.HashMap;
 
 public class ObjectWorkTypeDAOImpl implements ObjectWorkTypeDAO {
     private static ConceptComplexTypeDAO conceptComplexTypeDAO = new ConceptComplexTypeDAOImpl();
-    private static Utils utils = new Utils();
 
     public ObjectWorkType getObjectWorkType(Node node) {
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         return new ObjectWorkType(
                 conceptComplexTypeDAO.getConceptComplexType(node),

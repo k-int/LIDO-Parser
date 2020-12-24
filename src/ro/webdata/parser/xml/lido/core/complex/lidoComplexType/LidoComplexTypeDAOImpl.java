@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.lidoComplexType;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.administrativeMetadata.AdministrativeMetadataDAO;
 import ro.webdata.parser.xml.lido.core.leaf.category.CategoryDAO;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveMetadata.DescriptiveMetadataDAO;
@@ -29,7 +29,6 @@ public class LidoComplexTypeDAOImpl implements LidoComplexTypeDAO {
     private static CategoryDAO categoryParser = new CategoryDAOImpl();
     private static DescriptiveMetadataDAO descriptiveMetadataParser = new DescriptiveMetadataDAOImpl();
     private static AdministrativeMetadataDAO administrativeMetadataParser = new AdministrativeMetadataDAOImpl();
-    private static Utils utils = new Utils();
 
     public LidoComplexType getLidoComplexType(Node node) {
         ArrayList<LidoRecID> lidoRecIDList = new ArrayList<LidoRecID>();
@@ -37,7 +36,7 @@ public class LidoComplexTypeDAOImpl implements LidoComplexTypeDAO {
         Category category = null;
         ArrayList<DescriptiveMetadata> descriptiveMetadataList = new ArrayList<DescriptiveMetadata>();
         ArrayList<AdministrativeMetadata> administrativeMetadataList = new ArrayList<AdministrativeMetadata>();
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

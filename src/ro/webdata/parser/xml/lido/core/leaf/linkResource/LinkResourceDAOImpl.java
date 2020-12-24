@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.linkResource;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.complex.webResourceComplexType.WebResourceComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.webResourceComplexType.WebResourceComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoCodecResource;
@@ -10,10 +10,9 @@ import java.util.HashMap;
 
 public class LinkResourceDAOImpl implements LinkResourceDAO {
     private static WebResourceComplexTypeDAO webResourceComplexTypeDAO = new WebResourceComplexTypeDAOImpl();
-    private static Utils utils = new Utils();
 
     public LinkResource getLinkResource(Node node) {
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         return new LinkResource(
                 webResourceComplexTypeDAO.getWebResourceComplexType(node),

@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.descriptiveNoteComplexType;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteID.DescriptiveNoteIDDAO;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteValue.DescriptiveNoteValueDAO;
 import ro.webdata.parser.xml.lido.core.leaf.sourceDescriptiveNote.SourceDescriptiveNoteDAO;
@@ -22,13 +22,12 @@ public class DescriptiveNoteComplexTypeDAOImpl implements DescriptiveNoteComplex
     private static DescriptiveNoteIDDAO descriptiveNoteIDParser = new DescriptiveNoteIDDAOImpl();
     private static DescriptiveNoteValueDAO descriptiveNoteValueParser = new DescriptiveNoteValueDAOImpl();
     private static SourceDescriptiveNoteDAO sourceDescriptiveNoteParser = new SourceDescriptiveNoteDAOImpl();
-    private Utils utils = new Utils();
 
     public DescriptiveNoteComplexType getDescriptiveNoteComplexType(Node node) {
         ArrayList<DescriptiveNoteID> descriptiveNoteIDList = new ArrayList<DescriptiveNoteID>();
         ArrayList<DescriptiveNoteValue> descriptiveNoteValueList = new ArrayList<DescriptiveNoteValue>();
         ArrayList<SourceDescriptiveNote> sourceDescriptiveNoteList = new ArrayList<SourceDescriptiveNote>();
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

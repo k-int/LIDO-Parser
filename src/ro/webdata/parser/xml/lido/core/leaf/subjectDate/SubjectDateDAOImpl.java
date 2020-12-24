@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.subjectDate;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.complex.dateSetComplexType.DateSetComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.dateSetComplexType.DateSetComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
@@ -10,10 +10,9 @@ import java.util.HashMap;
 
 public class SubjectDateDAOImpl implements SubjectDateDAO {
     private static DateSetComplexTypeDAO dateSetComplexTypeDAO = new DateSetComplexTypeDAOImpl();
-    private static Utils utils = new Utils();
 
     public SubjectDate getSubjectDate(Node node) {
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         return new SubjectDate(
                 dateSetComplexTypeDAO.getDateSetComplexTypeParser(node),

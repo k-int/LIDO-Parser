@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.set.resourceSet;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.complex.resourceSetComplexType.ResourceSetComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.resourceSetComplexType.ResourceSetComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
@@ -10,10 +10,9 @@ import java.util.HashMap;
 
 public class ResourceSetDAOImpl implements ResourceSetDAO {
     private static ResourceSetComplexTypeDAO resourceSetComplexTypeDAO = new ResourceSetComplexTypeDAOImpl();
-    private static Utils utils = new Utils();
 
     public ResourceSet getResourceSet(Node node) {
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         return new ResourceSet(
                 resourceSetComplexTypeDAO.getResourceSetComplexType(node),

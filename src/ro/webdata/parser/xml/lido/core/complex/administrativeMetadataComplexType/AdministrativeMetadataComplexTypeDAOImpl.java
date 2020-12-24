@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.administrativeMetadataComplexType;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.wrap.recordWrap.RecordWrapDAO;
 import ro.webdata.parser.xml.lido.core.wrap.resourceWrap.ResourceWrapDAO;
 import ro.webdata.parser.xml.lido.core.wrap.rightsWorkWrap.RightsWorkWrapDAO;
@@ -20,13 +20,12 @@ public class AdministrativeMetadataComplexTypeDAOImpl implements AdministrativeM
     private static RecordWrapDAO recordWrapDAO = new RecordWrapDAOImpl();
     private static ResourceWrapDAO resourceWrapDAO = new ResourceWrapDAOImpl();
     private static RightsWorkWrapDAO rightsWorkWrapDAO = new RightsWorkWrapDAOImpl();
-    private Utils utils = new Utils();
 
     public AdministrativeMetadataComplexType getAdministrativeMetadataComplexType(Node node) {
         RightsWorkWrap rightsWorkWrap = null;
         RecordWrap recordWrap = null;
         ResourceWrap resourceWrap = null;
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

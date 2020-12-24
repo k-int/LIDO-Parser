@@ -6,7 +6,7 @@ import ro.webdata.parser.xml.lido.core.wrap.lidoWrap.LidoWrap;
 public class PrintMessages {
     /**
      * Print a warning message for the case when the LIDO documentation
-     * require a non empty array.
+     * requires a non empty array.
      * @param objectClass The class where the warning message has been triggered
      * @param nodeName The name of the required LIDO node
      */
@@ -18,7 +18,7 @@ public class PrintMessages {
 
     /**
      * Print a warning message for the case when the LIDO documentation
-     * require a non empty attribute.
+     * requires a non empty attribute.
      * @param objectClass The class where the warning message has been triggered
      * @param attributeName The name of the required LIDO attribute
      */
@@ -30,7 +30,7 @@ public class PrintMessages {
 
     /**
      * Print a warning message for the case when the LIDO documentation
-     * require a non empty node.
+     * requires a non empty node.
      * @param objectClass The class where the warning message has been triggered
      * @param nodeName The name of the required LIDO node
      */
@@ -41,7 +41,7 @@ public class PrintMessages {
 	}
 
     /**
-     * Print a summary log for the "lido:lido" nodes.
+     * Print the summary log for "lido:lido" nodes.
      * @param lidoWrap The "lido:lidoWrap" root element
      */
 	public void printLidoSummary(LidoWrap lidoWrap) {

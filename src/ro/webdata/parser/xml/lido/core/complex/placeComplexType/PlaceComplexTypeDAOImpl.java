@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.placeComplexType;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.gml.GmlDAO;
 import ro.webdata.parser.xml.lido.core.leaf.partOfPlace.PartOfPlaceDAO;
 import ro.webdata.parser.xml.lido.core.leaf.placeClassification.PlaceClassificationDAO;
@@ -30,7 +30,6 @@ public class PlaceComplexTypeDAOImpl implements PlaceComplexTypeDAO {
     private static GmlDAO gmlParser = new GmlDAOImpl();
     private static PartOfPlaceDAO partOfPlaceParser = new PartOfPlaceDAOImpl();
     private static PlaceClassificationDAO placeClassificationParser = new PlaceClassificationDAOImpl();
-    private static Utils utils = new Utils();
 
     public PlaceComplexType getPlaceComplexType(Node node) {
         ArrayList<PlaceID> placeIDList = new ArrayList<PlaceID>();
@@ -38,7 +37,7 @@ public class PlaceComplexTypeDAOImpl implements PlaceComplexTypeDAO {
         ArrayList<Gml> gmlList = new ArrayList<Gml>();
         ArrayList<PartOfPlace> partOfPlaceList = new ArrayList<PartOfPlace>();
         ArrayList<PlaceClassification> placeClassificationList = new ArrayList<PlaceClassification>();
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

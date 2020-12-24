@@ -1,16 +1,14 @@
 package ro.webdata.parser.xml.lido.core.complex.identifierComplexType;
 
 import org.w3c.dom.Node;
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.attribute.*;
 
 import java.util.HashMap;
 
 public class IdentifierComplexTypeDAOImpl implements IdentifierComplexTypeDAO {
-    private Utils utils = new Utils();
-
     public IdentifierComplexType getIdentifierComplexType(Node node) {
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         return new IdentifierComplexType(
                 node.getTextContent(),

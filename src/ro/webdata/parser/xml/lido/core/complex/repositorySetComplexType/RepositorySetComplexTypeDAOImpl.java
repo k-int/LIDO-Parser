@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.repositorySetComplexType;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.repositoryLocation.RepositoryLocationDAO;
 import ro.webdata.parser.xml.lido.core.leaf.repositoryName.RepositoryNameDAO;
 import ro.webdata.parser.xml.lido.core.leaf.workID.WorkIDDAO;
@@ -22,13 +22,12 @@ public class RepositorySetComplexTypeDAOImpl implements RepositorySetComplexType
     private static RepositoryNameDAO repositoryNameParser = new RepositoryNameDAOImpl();
     private static WorkIDDAO workIDDAO = new WorkIDDAOImpl();
     private static RepositoryLocationDAO repositoryLocationParser = new RepositoryLocationDAOImpl();
-    private static Utils utils = new Utils();
 
     public RepositorySetComplexType getRepositorySetComplexType(Node node) {
         RepositoryName repositoryName = null;
         ArrayList<WorkID> workIDList = new ArrayList<WorkID>();
         RepositoryLocation repositoryLocation = null;
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.resourceRepresentation;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.linkResource.LinkResourceDAO;
 import ro.webdata.parser.xml.lido.core.set.resourceMeasurementsSet.ResourceMeasurementsSetDAO;
 import ro.webdata.parser.xml.lido.core.leaf.linkResource.LinkResourceDAOImpl;
@@ -17,13 +17,12 @@ import java.util.HashMap;
 public class ResourceRepresentationDAOImpl implements ResourceRepresentationDAO {
     private static LinkResourceDAO linkParser = new LinkResourceDAOImpl();
     private static ResourceMeasurementsSetDAO measureSetParser = new ResourceMeasurementsSetDAOImpl();
-    private static Utils utils = new Utils();
 
     //TODO: create the ResourceRepresentationCompelexTypeDAO (artificial class) to extend the class
     public ResourceRepresentation getResourceRepresentation(Node node) {
         LinkResource linkResource = null;
         ArrayList<MeasurementsSetComplexType> resourceMeasurementsSet = new ArrayList<MeasurementsSetComplexType>();
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

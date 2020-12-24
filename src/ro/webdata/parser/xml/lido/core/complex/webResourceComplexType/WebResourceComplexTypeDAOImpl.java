@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.webResourceComplexType;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.attribute.LidoEncodingAnalog;
 import ro.webdata.parser.xml.lido.core.attribute.LidoFormatResource;
 import ro.webdata.parser.xml.lido.core.attribute.LidoLabel;
@@ -11,10 +11,8 @@ import org.w3c.dom.Node;
 import java.util.HashMap;
 
 public class WebResourceComplexTypeDAOImpl implements WebResourceComplexTypeDAO {
-    private static Utils utils = new Utils();
-
     public WebResourceComplexType getWebResourceComplexType(Node node) {
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         return new WebResourceComplexType(
                 node.getTextContent(),

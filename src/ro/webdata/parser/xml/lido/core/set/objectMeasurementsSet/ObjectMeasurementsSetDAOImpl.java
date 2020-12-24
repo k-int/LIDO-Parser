@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.set.objectMeasurementsSet;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.complex.objectMeasurementsSetComplexType.ObjectMeasurementsSetComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.objectMeasurementsSetComplexType.ObjectMeasurementsSetComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
@@ -10,10 +10,9 @@ import java.util.HashMap;
 
 public class ObjectMeasurementsSetDAOImpl implements ObjectMeasurementsSetDAO {
     private static ObjectMeasurementsSetComplexTypeDAO objectMeasurementsSetComplexTypeDAO = new ObjectMeasurementsSetComplexTypeDAOImpl();
-    private static Utils utils = new Utils();
 
     public ObjectMeasurementsSet getObjectMeasurementsSet(Node node) {
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         return new ObjectMeasurementsSet(
                 objectMeasurementsSetComplexTypeDAO.getObjectMeasurementsSetComplexType(node),

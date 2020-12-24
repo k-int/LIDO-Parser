@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.descriptiveMetadataComplexType;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.wrap.eventWrap.EventWrapDAO;
 import ro.webdata.parser.xml.lido.core.wrap.objectClassificationWrap.ObjectClassificationWrapDAO;
 import ro.webdata.parser.xml.lido.core.wrap.objectIdentificationWrap.ObjectIdentificationWrapDAO;
@@ -24,14 +24,13 @@ public class DescriptiveMetadataComplexTypeDAOImpl implements DescriptiveMetadat
     private static ObjectIdentificationWrapDAO objectIdentificationWrapDAO = new ObjectIdentificationWrapDAOImpl();
     private static EventWrapDAO eventWrapDAO = new EventWrapDAOImpl();
     private static ObjectRelationWrapDAO objectRelationWrapDAO = new ObjectRelationWrapDAOImpl();
-    private Utils utils = new Utils();
 
     public DescriptiveMetadataComplexType getDescriptiveMetadataComplexType(Node node) {
         ObjectClassificationWrap objectClassificationWrap = new ObjectClassificationWrap();
         ObjectIdentificationWrap objectIdentificationWrap = new ObjectIdentificationWrap();
         EventWrap eventWrap = new EventWrap();
         ObjectRelationWrap objectRelationWrap = new ObjectRelationWrap();
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.subjectEvent;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.complex.eventSetComplexType.EventSetComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.eventSetComplexType.EventSetComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
@@ -10,10 +10,9 @@ import java.util.HashMap;
 
 public class SubjectEventDAOImpl implements SubjectEventDAO {
     private static EventSetComplexTypeDAO eventSetComplexTypeDAO = new EventSetComplexTypeDAOImpl();
-    private static Utils utils = new Utils();
 
     public SubjectEvent getSubjectEvent(Node node) {
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         return new SubjectEvent(
                 eventSetComplexTypeDAO.getEventSetComplexType(node),

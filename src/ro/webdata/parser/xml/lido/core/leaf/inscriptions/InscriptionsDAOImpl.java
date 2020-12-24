@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.inscriptions;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.inscriptionTranscription.InscriptionTranscription;
 import ro.webdata.parser.xml.lido.core.leaf.inscriptionTranscription.InscriptionTranscriptionDAO;
 import ro.webdata.parser.xml.lido.core.leaf.inscriptionTranscription.InscriptionTranscriptionDAOImpl;
@@ -18,13 +18,12 @@ import java.util.HashMap;
 public class InscriptionsDAOImpl implements InscriptionsDAO {
     private static InscriptionTranscriptionDAO inscriptionTranscriptionParser = new InscriptionTranscriptionDAOImpl();
     private static InscriptionDescriptionDAO inscriptionDescriptionParser = new InscriptionDescriptionDAOImpl();
-    private static Utils utils = new Utils();
 
     //TODO: create the InscriptionsComplexTypeDAO (artificial class) to extend the class
     public Inscriptions getInscriptions(Node node) {
         ArrayList<InscriptionTranscription> inscriptionTranscriptionList = new ArrayList<InscriptionTranscription>();
         ArrayList<InscriptionDescription> inscriptionDescriptionList = new ArrayList<InscriptionDescription>();
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
         NodeList childNodeList = node.getChildNodes();
 
         for (int i = 0; i < childNodeList.getLength(); i++) {

@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.recordInfoSetComplexType;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.recordInfoID.RecordInfoIDDAO;
 import ro.webdata.parser.xml.lido.core.leaf.recordInfoLink.RecordInfoLinkDAO;
 import ro.webdata.parser.xml.lido.core.leaf.recordMetadataDate.RecordMetadataDateDAO;
@@ -21,13 +21,12 @@ public class RecordInfoSetComplexTypeDAOImpl implements RecordInfoSetComplexType
     private static RecordInfoIDDAO recordInfoIDParser = new RecordInfoIDDAOImpl();
     private static RecordInfoLinkDAO recordInfoLinkParser = new RecordInfoLinkDAOImpl();
     private static RecordMetadataDateDAO metadataParser = new RecordMetadataDateDAOImpl();
-    private static Utils utils = new Utils();
 
     public RecordInfoSetComplexType getRecordInfoSetComplexType(Node node) {
         ArrayList<RecordInfoID> recordInfoIDList = new ArrayList<RecordInfoID>();
         ArrayList<RecordInfoLink> recordInfoLinkList = new ArrayList<RecordInfoLink>();
         ArrayList<RecordMetadataDate> recordMetadataDateList = new ArrayList<RecordMetadataDate>();
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

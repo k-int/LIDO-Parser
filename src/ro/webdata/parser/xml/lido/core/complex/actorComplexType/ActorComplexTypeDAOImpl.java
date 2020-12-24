@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.actorComplexType;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.actorID.ActorIDDAO;
 import ro.webdata.parser.xml.lido.core.leaf.genderActor.GenderActorDAO;
 import ro.webdata.parser.xml.lido.core.leaf.nationalityActor.NationalityActorDAO;
@@ -29,7 +29,6 @@ public class ActorComplexTypeDAOImpl implements ActorComplexTypeDAO {
     private static NationalityActorDAO nationalityActorParser = new NationalityActorDAOImpl();
     private static VitalDatesActorDAO vitalDatesActorParser = new VitalDatesActorDAOImpl();
     private static GenderActorDAO genderActorParser = new GenderActorDAOImpl();
-    private static Utils utils = new Utils();
 
     public ActorComplexType getActorComplexType(Node node) {
         ArrayList<ActorID> actorIDList = new ArrayList<ActorID>();
@@ -37,7 +36,7 @@ public class ActorComplexTypeDAOImpl implements ActorComplexTypeDAO {
         ArrayList<NationalityActor> nationalityActorList = new ArrayList<NationalityActor>();
         VitalDatesActor vitalDatesActor = null;
         ArrayList<GenderActor> genderActorList = new ArrayList<GenderActor>();
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

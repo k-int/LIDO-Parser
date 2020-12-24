@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.objectNote;
 
-import ro.webdata.parser.xml.lido.common.Utils;
+import ro.webdata.parser.Graph;
 import ro.webdata.parser.xml.lido.core.complex.textComplexType.TextComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.textComplexType.TextComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoType;
@@ -10,10 +10,9 @@ import java.util.HashMap;
 
 public class ObjectNoteDAOImpl implements ObjectNoteDAO {
     private static TextComplexTypeDAO textComplexTypeDAO = new TextComplexTypeDAOImpl();
-    private static Utils utils = new Utils();
 
     public ObjectNote getObjectNote(Node node) {
-        HashMap<String, String> attributes = utils.getAttributes(node);
+        HashMap<String, String> attributes = Graph.getAttributes(node);
 
         return new ObjectNote(
                 textComplexTypeDAO.getTextComplexType(node),
