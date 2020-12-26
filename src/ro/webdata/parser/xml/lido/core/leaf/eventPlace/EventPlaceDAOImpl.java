@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.eventPlace;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.complex.placeSetComplexType.PlaceSetComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.placeSetComplexType.PlaceSetComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;

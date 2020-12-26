@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.inscriptions;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.inscriptionTranscription.InscriptionTranscription;
 import ro.webdata.parser.xml.lido.core.leaf.inscriptionTranscription.InscriptionTranscriptionDAO;
 import ro.webdata.parser.xml.lido.core.leaf.inscriptionTranscription.InscriptionTranscriptionDAOImpl;

@@ -1,7 +1,7 @@
 package ro.webdata.parser.xml.lido.core.leaf.qualifierMeasurements;
 
 import org.w3c.dom.Node;
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
 import ro.webdata.parser.xml.lido.core.complex.textComplexType.TextComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.textComplexType.TextComplexTypeDAOImpl;

@@ -2,7 +2,7 @@ package ro.webdata.parser.xml.lido.core.complex.subjectComplexType;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.extentSubject.ExtentSubject;
 import ro.webdata.parser.xml.lido.core.leaf.extentSubject.ExtentSubjectDAO;
 import ro.webdata.parser.xml.lido.core.leaf.extentSubject.ExtentSubjectDAOImpl;

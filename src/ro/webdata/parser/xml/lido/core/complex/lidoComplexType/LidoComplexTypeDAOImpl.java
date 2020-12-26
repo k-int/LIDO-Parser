@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.lidoComplexType;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.administrativeMetadata.AdministrativeMetadataDAO;
 import ro.webdata.parser.xml.lido.core.leaf.category.CategoryDAO;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveMetadata.DescriptiveMetadataDAO;

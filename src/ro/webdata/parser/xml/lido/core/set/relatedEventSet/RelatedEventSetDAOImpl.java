@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.set.relatedEventSet;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.complex.relatedEventSetComplexType.RelatedEventSetComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.relatedEventSetComplexType.RelatedEventSetComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;

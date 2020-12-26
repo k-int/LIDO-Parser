@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.workID;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.attribute.LidoEncodingAnalog;
 import ro.webdata.parser.xml.lido.core.attribute.LidoLabel;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;

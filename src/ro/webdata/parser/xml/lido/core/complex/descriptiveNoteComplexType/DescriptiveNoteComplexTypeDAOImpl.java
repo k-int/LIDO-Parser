@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.descriptiveNoteComplexType;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteID.DescriptiveNoteIDDAO;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteValue.DescriptiveNoteValueDAO;
 import ro.webdata.parser.xml.lido.core.leaf.sourceDescriptiveNote.SourceDescriptiveNoteDAO;

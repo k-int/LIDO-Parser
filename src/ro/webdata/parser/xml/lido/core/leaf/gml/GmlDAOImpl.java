@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.gml;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.complex.gmlComplexType.GmlComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.gmlComplexType.GmlComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.XmlLang;

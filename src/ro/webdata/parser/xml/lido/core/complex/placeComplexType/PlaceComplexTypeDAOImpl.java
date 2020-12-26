@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.placeComplexType;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.gml.GmlDAO;
 import ro.webdata.parser.xml.lido.core.leaf.partOfPlace.PartOfPlaceDAO;
 import ro.webdata.parser.xml.lido.core.leaf.placeClassification.PlaceClassificationDAO;

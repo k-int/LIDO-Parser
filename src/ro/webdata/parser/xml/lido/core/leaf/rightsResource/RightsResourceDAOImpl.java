@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.rightsResource;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.complex.rightsComplexType.RightsComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.rightsComplexType.RightsComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;

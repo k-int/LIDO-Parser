@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.descriptiveMetadataComplexType;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.wrap.eventWrap.EventWrapDAO;
 import ro.webdata.parser.xml.lido.core.wrap.objectClassificationWrap.ObjectClassificationWrapDAO;
 import ro.webdata.parser.xml.lido.core.wrap.objectIdentificationWrap.ObjectIdentificationWrapDAO;

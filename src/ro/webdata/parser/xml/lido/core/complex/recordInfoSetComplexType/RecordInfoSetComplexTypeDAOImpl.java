@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.recordInfoSetComplexType;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.recordInfoID.RecordInfoIDDAO;
 import ro.webdata.parser.xml.lido.core.leaf.recordInfoLink.RecordInfoLinkDAO;
 import ro.webdata.parser.xml.lido.core.leaf.recordMetadataDate.RecordMetadataDateDAO;

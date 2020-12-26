@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.eventMaterialsTech;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.complex.materialsTechSetComplexType.MaterialsTechSetComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.materialsTechSetComplexType.MaterialsTechSetComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;

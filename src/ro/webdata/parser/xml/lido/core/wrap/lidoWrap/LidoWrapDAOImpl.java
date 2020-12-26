@@ -2,7 +2,7 @@ package ro.webdata.parser.xml.lido.core.wrap.lidoWrap;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.lido.LidoDAO;
 import ro.webdata.parser.xml.lido.core.leaf.lido.LidoDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoRelatedEncoding;

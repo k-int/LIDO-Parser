@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.leaf.linkResource;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.complex.webResourceComplexType.WebResourceComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.webResourceComplexType.WebResourceComplexTypeDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoCodecResource;

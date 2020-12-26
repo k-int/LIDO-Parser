@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.repositorySetComplexType;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.repositoryLocation.RepositoryLocationDAO;
 import ro.webdata.parser.xml.lido.core.leaf.repositoryName.RepositoryNameDAO;
 import ro.webdata.parser.xml.lido.core.leaf.workID.WorkIDDAO;

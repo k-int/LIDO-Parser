@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.administrativeMetadataComplexType;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.wrap.recordWrap.RecordWrapDAO;
 import ro.webdata.parser.xml.lido.core.wrap.resourceWrap.ResourceWrapDAO;
 import ro.webdata.parser.xml.lido.core.wrap.rightsWorkWrap.RightsWorkWrapDAO;

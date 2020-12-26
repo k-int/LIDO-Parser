@@ -1,6 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.actorComplexType;
 
-import ro.webdata.parser.Graph;
+import ro.webdata.echo.commons.graph.Graph;
 import ro.webdata.parser.xml.lido.core.leaf.actorID.ActorIDDAO;
 import ro.webdata.parser.xml.lido.core.leaf.genderActor.GenderActorDAO;
 import ro.webdata.parser.xml.lido.core.leaf.nationalityActor.NationalityActorDAO;
