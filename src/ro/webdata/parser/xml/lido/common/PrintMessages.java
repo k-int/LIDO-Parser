@@ -46,8 +46,8 @@ public class PrintMessages {
      */
 	public void printLidoSummary(LidoWrap lidoWrap) {
         System.out.println("START lido summary");
-        for (int i = 0; i < lidoWrap.getLido().size(); i++) {
-            Lido lido = lidoWrap.getLido().get(i);
+        for (int i = 0; i < lidoWrap.getLidoList().size(); i++) {
+            Lido lido = lidoWrap.getLidoList().get(i);
             String categoryExistence = lido.getCategory() != null ? "1" : "0";
             System.out.println("\nlidoRecIDList size: " + lido.getLidoRecID().size()
                     + "\nobjectPublishedIDList size: " + lido.getObjectPublishedID().size()
