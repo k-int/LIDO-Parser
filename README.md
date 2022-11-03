@@ -6,6 +6,7 @@ Java parser for metadata presented according to LIDO XML Schema
 - JDK 8 or OpenJDK 1.8.
 
 ## Example
+### Parsing:
 ```java
 public class LidoWrapProcessing {
     private static final ParserDAO parserDAO = new ParserDAOImpl();
@@ -22,6 +23,24 @@ public class LidoWrapProcessing {
             ArrayList<DescriptiveMetadata> descriptiveMetadataList = lido.getDescriptiveMetadata();
 
             // then, you can go deeper to extract administrative/descriptive data, categories and lido ids
+        }
+    }
+}
+```
+
+### Serialization using "jackson" library:
+```java
+public class LidoWrapProcessing {
+    private static final ParserDAO parserDAO = new ParserDAOImpl();
+
+    public static void serialize(String inputFullPath, outputPath) {
+        LidoWrap lidoWrap = parserDAO.parseLidoFile(inputFullPath);
+        ObjectMapper mapper = new ObjectMapper();
+
+        try {
+            mapper.writeValue(new File(outputPath), lidoWrap);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
