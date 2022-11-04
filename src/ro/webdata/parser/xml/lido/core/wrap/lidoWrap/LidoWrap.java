@@ -27,14 +27,14 @@ import ro.webdata.parser.xml.lido.core.leaf.lido.Lido;
  *
  */
 public class LidoWrap {
-	private ArrayList<Lido> lido = new ArrayList<Lido>();
+	private ArrayList<Lido> lidoList = new ArrayList<Lido>();
 	private LidoRelatedEncoding relatedEncodingAttr;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public LidoWrap() {}
 
 	public LidoWrap(ArrayList<Lido> lido, LidoRelatedEncoding relatedEncodingAttr) {
-		setLido(lido);
+		setLidoList(lido);
 		setRelatedEncodingAttr(relatedEncodingAttr);
 
 		if (lido == null || lido.isEmpty()) {
@@ -42,12 +42,12 @@ public class LidoWrap {
 		}
 	}
 
-	public ArrayList<Lido> getLido() {
-		return lido;
+	public ArrayList<Lido> getLidoList() {
+		return lidoList;
 	}
 
-	public void setLido(ArrayList<Lido> lido) {
-		this.lido = lido;
+	public void setLidoList(ArrayList<Lido> lidoList) {
+		this.lidoList = lidoList;
 	}
 
 	public LidoRelatedEncoding getRelatedEncodingAttr() {

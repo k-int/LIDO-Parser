@@ -49,7 +49,7 @@ public class Main {
 		ParserDAO parserDAO = new ParserDAOImpl();
 		LidoWrap lidoWrap = parserDAO.parseLidoFile(xmlFilePath);
 
-		DescriptiveMetadata descriptiveMetadata = lidoWrap.getLido().get(0).getDescriptiveMetadata().get(0);
+		DescriptiveMetadata descriptiveMetadata = lidoWrap.getLidoList().get(0).getDescriptiveMetadata().get(0);
 		ArrayList<EventSet> eventSets = descriptiveMetadata.getEventWrap().getEventSet();
 
 		for (int i = 0; i < eventSets.size(); i++) {
@@ -61,6 +61,6 @@ public class Main {
 //			System.out.println(eventDate == null);
 		}
 
-		return lidoWrap.getLido().size();
+		return lidoWrap.getLidoList().size();
 	}
 }
